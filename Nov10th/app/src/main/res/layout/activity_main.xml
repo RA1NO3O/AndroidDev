@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="showDialog"
-        android:text="2-16 Dialog"
+        android:text="2-16 普通对话框"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="showDialog"
-        android:text="2-17 Dialog"
+        android:text="2-17 单选对话框"
         app:layout_constraintStart_toEndOf="@+id/button0"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="showDialog"
-        android:text="2-18 Dialog"
+        android:text="2-18 多选对话框"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="showDialog"
-        android:text="2-19 Dialog"
+        android:text="2-19 进度条对话框"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
@@ -47,7 +47,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="showDialog"
-        android:text="2-20 Dialog"
+        android:text="2-20 Toast"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showDialog"
+        android:text="2-23 自定义对话框"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="swichActivity"
+        android:text="启动 Activity2"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -16,6 +18,37 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i("MainActivityLife","调用onCreate()");
+    }
+    @Override
+    protected void onStart(){
+        super.onStart();
+        Log.i("MainActivityLife","调用onStart()");
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Log.i("MainActivityLife","调用onResume()");
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Log.i("MainActivityLife","调用onPause()");
+    }
+    @Override
+    protected void onStop(){
+        super.onStop();
+        Log.i("MainActivityLife","调用onStop()");
+    }
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.i("MainActivityLife","调用onDestroy()");
+    }
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        Log.i("MainActivityLife","调用onRestart()");
     }
     public void showDialog(View v){
         switch (v.getId()){
@@ -60,6 +93,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.button4:
                 Toast.makeText(this,"Hello,Toast", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.button5:
+//              setContentView(R.layout.my_dialog);
+                MyDialog myDialog = new MyDialog(this,"我是自定义的Dialog");
+                myDialog.show();
+                break;
         }
+    }
+    public void swichActivity(View v){
+        Intent activity2 = new Intent(MainActivity.this,Activity2.class);
+        startActivity(activity2);
     }
 }
