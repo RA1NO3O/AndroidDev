@@ -10,11 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class Calc extends AppCompatActivity {
-
     private EditText txt_Input;
     private int calcmode;
     private boolean insertmode=true;
-    private double lastNum=0;
+    private double lastNum=0.0;
+    public double result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +50,7 @@ public class Calc extends AppCompatActivity {
     }
 
     public void btnClear_onClick(View v){       //归零
-        txt_Input.setText("0");
-        calcmode=0;
-        insertmode=true;
+        txt_Input.setText("0"); calcmode=0; lastNum=0.0; insertmode=true;
     }
 
     public void btnCalcmode_onClick(View v){    //运算符
@@ -62,15 +60,19 @@ public class Calc extends AppCompatActivity {
         switch (btn_clicked.getText().toString()){
             case "+":
                 calcmode=1;
+                lastNum=Double.parseDouble(txt_Input.getText().toString());
                 break;
             case "-":
                 calcmode=2;
+                lastNum=Double.parseDouble(txt_Input.getText().toString());
                 break;
             case "×":
                 calcmode=3;
+                lastNum=Double.parseDouble(txt_Input.getText().toString());
                 break;
             case "÷":
                 calcmode=4;
+                lastNum=Double.parseDouble(txt_Input.getText().toString());
                 break;
         }
     }
@@ -84,6 +86,38 @@ public class Calc extends AppCompatActivity {
     }
 
     public void btnDot_onClick(View v){     //小数点
-
+        if(txt_Input.getText().toString().endsWith(".")){
+            btnBackspace_onClick(v);
+        }else if(!txt_Input.getText().toString().contains(".")){
+            txt_Input.setText(txt_Input.getText().toString()+".");
+        }
+    }
+    public void btnCalc_onClick(View v){
+        switch (calcmode){
+            case 1:
+                result =lastNum+Double.parseDouble(txt_Input.getText().toString());
+                txt_Input.setText(Double.toString(result));
+                break;
+            case 2:
+                result =lastNum-Double.parseDouble(txt_Input.getText().toString());
+                txt_Input.setText(Double.toString(result));
+                break;
+            case 3:
+                result =lastNum*Double.parseDouble(txt_Input.getText().toString());
+                txt_Input.setText(Double.toString(result));
+                break;
+            case 4:
+                if(txt_Input.getText().equals("0")){
+                    txt_Input.setText("出错");
+                }else {
+                    result =lastNum/Double.parseDouble(txt_Input.getText().toString());
+                    txt_Input.setText(Double.toString(result));
+                }
+                break;
+            default:
+                txt_Input.setText(Double.toString(lastNum));
+                break;
+        }
+        insertmode=false;
     }
 }
