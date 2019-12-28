@@ -53,7 +53,7 @@
 
         <Button
             android:id="@+id/btn_time"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
@@ -67,7 +67,7 @@
 
         <Button
             android:id="@+id/btn_Del"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
@@ -116,7 +116,7 @@
 
         <Button
             android:id="@+id/btn_divide"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
@@ -130,7 +130,7 @@
 
         <Button
             android:id="@+id/btn_Clear"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
@@ -177,7 +177,7 @@
 
         <Button
             android:id="@+id/btn_minus"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
@@ -220,7 +220,7 @@
 
         <Button
             android:id="@+id/btn_plus"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
@@ -234,7 +234,7 @@
 
         <Button
             android:id="@+id/btn_is"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"

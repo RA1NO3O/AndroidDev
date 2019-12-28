@@ -59,4 +59,8 @@ public class MainActivity extends AppCompatActivity {
         b = b.length()==1 ? "0" + b : b ;
         return "#"+r+g+b;
     }
+    public void lbl_welcome_onClick(View v){
+        //refresh label color
+        lbl_welcome.setTextColor(Color.parseColor(generate_RandomColor()));
+    }
 }
