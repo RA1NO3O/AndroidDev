@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#ffffff"
+        android:background="#000000"
         android:orientation="vertical">
 
         <TextView
@@ -18,8 +18,7 @@
             android:gravity=""
             android:paddingStart="10dp"
             android:paddingTop="5dp"
-            android:text="⚠提示"
-            android:layout_marginLeft="10dp"
+            android:text="    ⚠提示"
             android:textColor="#ffffff"
             android:textSize="20sp"
             android:visibility="visible" />
