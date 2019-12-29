@@ -19,7 +19,7 @@
                 android:value="com.example.dec8th.MainActivity" />
         </activity>
         <activity
-            android:name=".Chat"
+            android:name=".Login"
             android:label="@string/chat" />
         <activity
             android:name=".Calc"

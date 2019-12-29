@@ -3,14 +3,11 @@ package com.example.dec8th;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.BitmapRegionDecoder;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -41,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(jumper);
     }
     public void btnChat_onClick(View v){
-        Intent jumper = new Intent(this,Chat.class);
+        Intent jumper = new Intent(this, Login.class);
         startActivity(jumper);
     }
     public void btnOptions_onClick(View v){
