@@ -4,63 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEEEE"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="vertical"
-        android:background="#FFFFFF">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lbl_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:onClick="lbl_welcome_onClick"
+                android:text="欢迎"
+                android:textSize="40dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
         <TextView
-            android:id="@+id/lbl_Welcome"
-            android:layout_width="wrap_content"
+            android:id="@+id/lbl_Time"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:textSize="36sp"
-            android:textStyle="bold"
-            android:text="欢迎，" />
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="(启动时间)"/>
         <TextView
-            android:id="@+id/lbl_Password"
+            android:id="@+id/pwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="30dp"
-            android:text="您的密码："/>
+            android:text="您的验证码是:"
+            android:textColor="#00FF00"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_Calc"
+                android:onClick="btnCalc_onClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="计算器"/>
+
+            <Button
+                android:id="@+id/btn_Chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="btnChat_onClick"
+                android:text="注销" />
+        </LinearLayout>
+
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <Button
-            android:id="@+id/btn_news"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/news"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="33sp"
-        android:text="动态"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
